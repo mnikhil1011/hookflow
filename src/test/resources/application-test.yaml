@@ -1,0 +1,13 @@
+# Overrides for tests: short waits so retries and timeouts finish in milliseconds, not hours.
+hookflow:
+  admin-token: test-admin-token
+  allow-insecure-urls: true
+  delivery:
+    request-timeout: 2s
+    attempt-lease: 3s
+    retry-delays: [200ms, 200ms]
+    retry-jitter: 0
+  flow-control:
+    max-pause: 200ms
+  polling:
+    interval: 50ms

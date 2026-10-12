@@ -1,0 +1,5 @@
+# Settings for running on your own machine: .\mvnw.cmd spring-boot:run "-Dspring-boot.run.profiles=local"
+hookflow:
+  admin-token: dev-admin-token
+  # Lets endpoints point at http://localhost, which the mock receiver needs.
+  allow-insecure-urls: true
